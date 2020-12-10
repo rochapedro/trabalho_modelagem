@@ -1,4 +1,4 @@
-<div class="horizontal-menu">
+<div class="horizontal-menu fixed-top" style="top: 70px;">
     <div class="container">
         <div class="row">
             <nav class="navbar navbar-light navbar-expand-lg main-menu">
