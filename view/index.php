@@ -165,12 +165,12 @@
                                 <div class="col-6">
                                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                         <div class="carousel-inner">
-                                            <div class="container-fluid" style="margin-top: 200px;">
-                                                <div class="carousel-item active">
-                                                    <div class="card mb-3" style="max-width: 540px;">
+                                            <div style="margin-top: 200px;">
+                                                <div class="carousel-item active" style="margin-left: -40px;">
+                                                    <div class="card mb-3" style="max-width: 750px;">
                                                         <div class="row no-gutters">
                                                             <div class="col-md-4">
-                                                                <img src="..." class="card-img" alt="...">
+                                                                <img src="../image/usuario.jpg" class="card-img" alt="...">
                                                             </div>
                                                             <div class="col-md-8">
                                                                 <div class="card-body">
@@ -182,10 +182,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item active">
-                                                    <div class="card mb-3" style="max-width: 540px;">
+                                                    <div class="card mb-3" style="max-width: 750px;">
                                                         <div class="row no-gutters">
                                                             <div class="col-md-4">
-                                                                <img src="..." class="card-img" alt="...">
+                                                                <img src="../image/usuario.jpg" class="card-img" alt="...">
                                                             </div>
                                                             <div class="col-md-8">
                                                                 <div class="card-body">
@@ -197,10 +197,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="carousel-item active">
-                                                    <div class="card mb-3" style="max-width: 540px;">
+                                                    <div class="card mb-3" style="max-width: 750px;">
                                                         <div class="row no-gutters">
                                                             <div class="col-md-4">
-                                                                <img src="..." class="card-img" alt="...">
+                                                                <img src="../image/usuario.jpg" class="card-img" alt="...">
                                                             </div>
                                                             <div class="col-md-8">
                                                                 <div class="card-body">
