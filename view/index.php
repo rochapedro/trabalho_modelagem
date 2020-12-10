@@ -223,6 +223,38 @@
                                 </div> 
                             </div>
                         </div>
+
+                        <div class="container">
+                            <h1 class="text-center" style="padding-bottom: 5rem;">ENTRAR EM CONTATO</h1>
+                            <div class="row" >
+                                <div class="col-6">
+                                    <div class="container" style="max-width: 40rem;">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="nome">Nome</label>
+                                                <input type="text" class="form-control" id="nome">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="telefone">Telefone</label>
+                                                <input type="text" class="form-control" id="telefone">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email">Email</label>s
+                                                <input type="email" class="form-control" id="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="mensagem">Mensagem</label>
+                                                <textarea class="form-control" id="mensagem" rows="3"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Enviar</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <img src="../image/email_2.png" class="img-fluid" alt="">
+                                </div> 
+                            </div>
+                        </div>
                         
                     
                     <!-- End Offcanvas Sidebar -->
