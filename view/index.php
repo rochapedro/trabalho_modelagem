@@ -15,7 +15,7 @@
         <title><?php getAppName() ?></title>
         
     </head>
-    <body id="page-top">
+    <body>
         <div class="page db-modern">
             <header class="header">
                 <div class="container">
@@ -24,39 +24,34 @@
                     ?>
                 </div>
             </header>
-            <div class="page-content">
+            <div class="page-content" style="margin-top: -35px;">
                 <div class="content-inner boxed mt-4 w-100">
+                    <section id="sobre">
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="top: -21px;">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                <img class="d-block w-100" src="../image/banner/imagem_1.jpg" alt="First slide">
+                                <img class="d-block w-100" src="../image/banner/imagem_1.jpg" alt="First slide" style="height: 1050px;">
                                 </div>
                                 <div class="carousel-item">
-                                <img class="d-block w-100" src="../image/banner/imagem_2.jpg" alt="Second slide">
+                                <img class="d-block w-100" src="../image/banner/imagem_2.jpg" alt="Second slide" style="height: 1050px;">
                                 </div>
                                 <div class="carousel-item">
-                                <img class="d-block w-100" src="../image/banner/imagem_3.jpg" alt="Third slide">
+                                <img class="d-block w-100" src="../image/banner/imagem_3.jpg" alt="Third slide" style="height: 1050px;">
                                 </div>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>    
-                        
-                        <div class="container" >
-                            <div class="col-xl-12" style="top: -90px;">
+                        </div>
+
+                        <div class="container" style="margin-top: -80px;">
+                            <div class="col-xl-12">
                                 <div class="widget widget-23 bg-grey d-flex justify-content-center align-items-center" style="height: 650px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
                                     <div class="widget-body text-center">
                                         
                                     </div>
                                 </div>
                             </div>
-                        </div>   
+                        </div> 
+                    </section>
+                    <section id="areas_carentes">  
                         <div class="container" style="text-align: center; margin-bottom: 50px;">
                             <h1 style="margin-bottom: 20px;">ÁREAS CARENTES</h1>
                             <div class="container">
@@ -66,9 +61,10 @@
                         <div id="container" style="width: 100%;height: 700px;"> 
                             
                         </div>
+                    </section>    
 
                        
-                        
+                    <section id="apoiadores" style="padding-top: 75px;">
                         <div class="container" style="background-color: #2c304d; height: 100px; border-radius: 5px;">
                             <div class="row" >
                                 <div class="container">
@@ -155,7 +151,8 @@
                                 </div>
                             </div>
                         </div>
-
+                    </section>    
+                    <section id="feedbacks">
                         <div class="container-fluid">
                             <h1 class="text-center">FEEDBACKS</h1>
                             <div class="row" >
@@ -223,7 +220,8 @@
                                 </div> 
                             </div>
                         </div>
-
+                    </section>
+                    <section id="contato">
                         <div class="container">
                             <h1 class="text-center" style="padding-bottom: 5rem;">ENTRAR EM CONTATO</h1>
                             <div class="row" >
@@ -255,6 +253,7 @@
                                 </div> 
                             </div>
                         </div>
+                    </section>    
                         
                     
                     <!-- End Offcanvas Sidebar -->
@@ -263,9 +262,16 @@
             </div>
             <!-- End Page Content -->
         </div>
-        <!-- Begin Vendor Js -->
-        <script src="../assets/vendors/js/base/jquery.min.js"></script>
-    
+      
+        <!-- Bootstrap core JavaScript -->
+        <script src="../js/jquery/jquery.min.js"></script>
+        <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="../js/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom JavaScript for this theme -->
+        <script src="../js/scrolling/scrolling-nav.js"></script>
     
         <!-- End Page Snippets -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
