@@ -160,10 +160,66 @@
                             <h1 class="text-center">FEEDBACKS</h1>
                             <div class="row" >
                                 <div class="col-6">
-                                    <img src="../image/comentarios.jpg" class="img-fluid" alt="">
+                                    <img src="../image/comentarios.jpg" class="img-fluid" style="width: 900px; height: 900px;" alt="">
                                 </div>  
                                 <div class="col-6">
-                                    
+                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div style="margin-top: 200px;">
+                                                <div class="container" style="">
+                                                    <div class="carousel-item active">
+                                                        <div class="card mb-3" style="max-width: 600px; left: -4rem;">
+                                                            <div class="row no-gutters">
+                                                                <div class="col-md-4">
+                                                                    <img src="../image/usuario.jpg" class="card-img" alt="...">
+                                                                </div>
+                                                                <div class="col-md-8">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Card title</h5>
+                                                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="container">
+                                                    <div class="carousel-item active">
+                                                        <div class="card mb-3" style="max-width: 550px; left: 8rem;">
+                                                            <div class="row no-gutters">
+                                                                <div class="col-md-4">
+                                                                    <img src="../image/usuario.jpg" class="card-img" alt="...">
+                                                                </div>
+                                                                <div class="col-md-8">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Card title</h5>
+                                                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="container">
+                                                    <div class="carousel-item active">
+                                                        <div class="card mb-3" style="max-width: 600px; left: 2rem;">
+                                                            <div class="row no-gutters">
+                                                                <div class="col-md-4">
+                                                                    <img src="../image/usuario.jpg" class="card-img" alt="...">
+                                                                </div>
+                                                                <div class="col-md-8">
+                                                                    <div class="card-body">
+                                                                        <h5 class="card-title">Card title</h5>
+                                                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>s
+                                            </div>    
+                                        </div>
+                                    </div>
                                 </div> 
                             </div>
                         </div>
