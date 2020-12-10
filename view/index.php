@@ -1,17 +1,9 @@
 <?php
-
     require_once ('../app/scripts.php');
-
 ?>
 
 <!DOCTYPE html>
-<!--
-Item Name: Elisyam - Web App & Admin Dashboard Template
-Version: 1.5
-Author: SAEROX
 
-** A license must be purchased in order to legally use this template for your project **
--->
 <html lang="en">
     <head>
         <?php
@@ -21,20 +13,10 @@ Author: SAEROX
             getJsCommonFiles();
         ?>
         <title><?php getAppName() ?></title>
-        <link rel="stylesheet" href="../assets/css/leaflet/leaflet.min.css">
         
     </head>
     <body id="page-top">
-        <!-- Begin Preloader -->
-        <div id="preloader">
-            <div class="canvas">
-                <img src="../assets/img/logo.png" alt="logo" class="loader-logo">
-                <div class="spinner"></div>   
-            </div>
-        </div>
-        <!-- End Preloader -->
         <div class="page db-modern">
-            <!-- Begin Header -->
             <header class="header">
                 <div class="container">
                     <?php
@@ -42,14 +24,7 @@ Author: SAEROX
                     ?>
                 </div>
             </header>
-            <!-- End Header -->
-            <!-- Begin Page Content -->
             <div class="page-content">
-                <!-- Begin Navigation -->
-                <?php
-                   // require_once('../includes/menu_horizontal.php');
-                ?>
-                <!-- End Navigation -->
                 <div class="content-inner boxed mt-4 w-100">
         
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="top: -21px;">
@@ -191,17 +166,8 @@ Author: SAEROX
         </div>
         <!-- Begin Vendor Js -->
         <script src="../assets/vendors/js/base/jquery.min.js"></script>
-        <script src="../assets/vendors/js/base/core.min.js"></script>
-        <!-- End Vendor Js -->
-        <!-- Begin Page Vendor Js -->
-        <script src="../assets/vendors/js/nicescroll/nicescroll.min.js"></script>
-        <script src="../assets/vendors/js/waypoints/waypoints.min.js"></script>
-        <script src="../assets/vendors/js/chart/chart.min.js"></script>
-        <script src="../assets/vendors/js/progress/circle-progress.min.js"></script>
-        <script src="../assets/vendors/js/app/app.min.js"></script>
-        <!-- End Page Vendor Js -->
-        <!-- Begin Page Snippets -->
-        <script src="../assets/js/dashboard/db-modern.min.js"></script>
+    
+    
         <!-- End Page Snippets -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
   <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
