@@ -40,7 +40,9 @@
                             <div class="col-xl-12">
                                 <div class="widget widget-23 bg-grey d-flex justify-content-center align-items-center" style="height: 650px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
                                     <div class="widget-body text-center">
-                                        
+                                        <?php
+                                            echo MidiaController::showInfoSobre();
+                                        ?>
                                     </div>
                                 </div>
                             </div>

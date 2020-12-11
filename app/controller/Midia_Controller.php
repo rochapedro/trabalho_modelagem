@@ -43,6 +43,22 @@ class MidiaController {
         return $return;
     }
 
+    public static function showInfoSobre(){
+      $data = new Midia();
+      $data = $data->getInfoProjeto();
+
+      $return = '';
+      foreach ($data as $row){
+      
+          $return .= '
+          <h1 style="margin-bottom: 20px;">'.$row->titulo.'</h1>
+          <p>'.$row->texto.'</p>
+          ';
+
+      }
+      return $return;
+  }
+
     
 
 }
