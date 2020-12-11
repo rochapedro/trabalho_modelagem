@@ -1,7 +1,6 @@
 <?php
     require_once ('../app/scripts.php');
     require_once ('../app/controller/Midia_Controller.php');
-    require_once ('../app/controller/Apoiador_Controller.php');
 ?>
 
 <!DOCTYPE html>
