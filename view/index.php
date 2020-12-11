@@ -1,6 +1,7 @@
 <?php
     require_once ('../app/scripts.php');
-    require_once ('../app/controller/Midia_Controller.php')
+    require_once ('../app/controller/Midia_Controller.php');
+    require_once ('../app/controller/Apoiador_Controller.php');
 ?>
 
 <!DOCTYPE html>
@@ -68,7 +69,7 @@
                                     <div class="col-12" style="top: -30px; padding-left: 20rem; width: 60rem;">
                                         <div class="widget widget-23 bg-grey d-flex justify-content-center align-items-center" style="height: 50px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
                                             <div class="widget-body text-center">
-                                                
+                                                <h1>APOIADORES</h1>
                                             </div>
                                         </div>
                                     </div>
@@ -81,7 +82,10 @@
                                 <div class="col-4" style=" top: -30px">
                                     <div class="widget widget-23 bg-grey d-flex justify-content-center align-items-center" style="height: 60px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
                                         <div class="widget-body text-center">
-                                            
+                                            <h4>Total de apoiadores:.</h4>
+                                            <?php
+                                                echo ApoiadorController::showTotalApoiadores();
+                                            ?>
                                         </div>
                                     </div>
                                 </div>  
