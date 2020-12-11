@@ -155,8 +155,11 @@ CREATE TABLE `midia` (
   `id_midia` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) DEFAULT NULL,
   `caminho` varchar(100) DEFAULT NULL,
+  `midia` int(11) DEFAULT NULL,
+  `data_criado` timestamp NULL DEFAULT current_timestamp(),
+  `ativo` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_midia`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -165,6 +168,7 @@ CREATE TABLE `midia` (
 
 LOCK TABLES `midia` WRITE;
 /*!40000 ALTER TABLE `midia` DISABLE KEYS */;
+INSERT INTO `midia` VALUES (1,'Banner 1','../image/banner/imagem_1.jpg',1,'2020-12-11 00:04:58',1),(2,'Banner 2','../image/banner/imagem_2.jpg',1,'2020-12-11 00:04:58',1),(3,'Banner 3','../image/banner/imagem_3.jpg',1,'2020-12-11 00:04:58',1);
 /*!40000 ALTER TABLE `midia` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -322,4 +326,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-10 20:55:39
+-- Dump completed on 2020-12-10 21:32:57

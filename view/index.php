@@ -1,5 +1,6 @@
 <?php
     require_once ('../app/scripts.php');
+    require_once ('../app/controller/Midia_Controller.php')
 ?>
 
 <!DOCTYPE html>
@@ -29,15 +30,9 @@
                     <section id="sobre">
                         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="top: -21px;">
                             <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                <img class="d-block w-100" src="../image/banner/imagem_1.jpg" alt="First slide" style="height: 1050px;">
-                                </div>
-                                <div class="carousel-item">
-                                <img class="d-block w-100" src="../image/banner/imagem_2.jpg" alt="Second slide" style="height: 1050px;">
-                                </div>
-                                <div class="carousel-item">
-                                <img class="d-block w-100" src="../image/banner/imagem_3.jpg" alt="Third slide" style="height: 1050px;">
-                                </div>
+                                <?php
+                                    echo MidiaController::showBanners();
+                                ?>
                             </div>
                         </div>
 
