@@ -16,6 +16,35 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `apoiador`
+--
+
+DROP TABLE IF EXISTS `apoiador`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `apoiador` (
+  `id_apoiador` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) DEFAULT NULL,
+  `foto` varchar(45) DEFAULT NULL,
+  `comentario` varchar(500) DEFAULT NULL,
+  `ativo` varchar(45) DEFAULT NULL,
+  `data_criado` timestamp NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id_apoiador`),
+  KEY `fk_midia_apioador_idx` (`foto`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `apoiador`
+--
+
+LOCK TABLES `apoiador` WRITE;
+/*!40000 ALTER TABLE `apoiador` DISABLE KEYS */;
+INSERT INTO `apoiador` VALUES (1,'Pedro Henrique de Sousa Rocha Correa','../image/apoiador/usuario.jpg','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s','1','2020-12-11 00:49:37'),(2,'Marytza Gabriela','../image/apoiador/usuario.jpg','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s','1','2020-12-11 01:07:09');
+/*!40000 ALTER TABLE `apoiador` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `cidade`
 --
 
@@ -159,7 +188,7 @@ CREATE TABLE `midia` (
   `data_criado` timestamp NULL DEFAULT current_timestamp(),
   `ativo` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_midia`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -168,7 +197,7 @@ CREATE TABLE `midia` (
 
 LOCK TABLES `midia` WRITE;
 /*!40000 ALTER TABLE `midia` DISABLE KEYS */;
-INSERT INTO `midia` VALUES (1,'Banner 1','../image/banner/imagem_1.jpg',1,'2020-12-11 00:04:58',1),(2,'Banner 2','../image/banner/imagem_2.jpg',1,'2020-12-11 00:04:58',1),(3,'Banner 3','../image/banner/imagem_3.jpg',1,'2020-12-11 00:04:58',1);
+INSERT INTO `midia` VALUES (1,'Banner 1','../image/banner/imagem_1.jpg',1,'2020-12-11 00:04:58',1),(2,'Banner 2','../image/banner/imagem_2.jpg',1,'2020-12-11 00:04:58',1),(3,'Banner 3','../image/banner/imagem_3.jpg',1,'2020-12-11 00:04:58',1),(4,'Foto Pedro','../image/apoiador/usuario.jpg',2,'2020-12-11 00:50:50',1);
 /*!40000 ALTER TABLE `midia` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -269,15 +298,13 @@ CREATE TABLE `sobre` (
   `id_texto` int(11) NOT NULL AUTO_INCREMENT,
   `titulo` varchar(200) DEFAULT NULL,
   `texto` varchar(1000) DEFAULT NULL,
-  `id_midia` int(11) DEFAULT NULL,
   `data` timestamp NULL DEFAULT NULL,
   `id_usuario` int(11) DEFAULT NULL,
+  `ativo` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_texto`),
   KEY `fk_sobre_usuario_idx` (`id_usuario`),
-  KEY `fk_sobre_midia_idx` (`id_midia`),
-  CONSTRAINT `fk_sobre_midia` FOREIGN KEY (`id_midia`) REFERENCES `midia` (`id_midia`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_sobre_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -286,6 +313,7 @@ CREATE TABLE `sobre` (
 
 LOCK TABLES `sobre` WRITE;
 /*!40000 ALTER TABLE `sobre` DISABLE KEYS */;
+INSERT INTO `sobre` VALUES (1,'SOBRE O PROJETO','Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',NULL,NULL,1);
 /*!40000 ALTER TABLE `sobre` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -326,4 +354,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-10 21:32:57
+-- Dump completed on 2020-12-11  9:11:22
