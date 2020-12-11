@@ -88,6 +88,56 @@ class MidiaController {
     return $return;
 }
 
+public static function showFeedbacks(){
+  $data = new Midia();
+  $data = $data->getFeedbacks();
+  $i = 1;
+  $return = '';
+  foreach ($data as $row){
+  
+    if($i == 1){
+      $return .= '
+      <div class="carousel-item active">
+        <div class="card mb-3" style="max-width: 600px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="'.$row->caminho.'" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">'.$row->nome.' '.$row->sobrenome.'</h5>
+                        <p class="card-text">'.$row->feedback.'</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+        ';
+    } else {
+      $return .= '
+      <div class="carousel-item">
+        <div class="card mb-3" style="max-width: 600px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="'.$row->caminho.'" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">'.$row->nome.' '.$row->sobrenome.'</h5>
+                        <p class="card-text">'.$row->feedback.'</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+        ';
+    } 
+    
+    $i++;
+  }
+  return $return;
+}
+
     
 
 }

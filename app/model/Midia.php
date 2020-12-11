@@ -57,4 +57,15 @@ class Midia {
         }
     }
 
+    public function getFeedbacks(){
+        try{
+            $stmt = $this->pdo->prepare("SELECT u.nome, u.sobrenome, m.caminho, f.feedback FROM usuario as u JOIN feedback as f ON u.id_usuario = f.id_usuario JOIN midia as m ON u.id_midia = m.id_midia WHERE f.ativo = 1 ORDER BY RAND();");
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_CLASS);
+            return $result;
+        } catch (PDOException $exc) {
+            echo get_class($this).": {$exc->getMessage()}";
+        }
+    }
+
 }

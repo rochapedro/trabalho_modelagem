@@ -20,6 +20,10 @@ class ApoiadorController {
         $data = new Apoiador();
         $data = $data->getTotalApoiadores();
 
+        print_r($data);
+
+        
+
         $return = ''.$data['total'].'';
     
         return $return;
