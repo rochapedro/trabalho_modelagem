@@ -36,11 +36,10 @@
                                 ?>
                             </div>
                         </div>
-
                         <div class="container" style="margin-top: -80px;">
                             <div class="col-xl-12">
-                                <div class="widget widget-23 bg-grey d-flex justify-content-center align-items-center" style="height: 650px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
-                                    <div class="widget-body text-center">
+                                <div class="widget widget-23 bg-grey d-flex" style="height: 650px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
+                                    <div class="widget-body text-center" style="margin-top: 20px;">
                                         <?php
                                             echo MidiaController::showInfoSobre();
                                         ?>
@@ -53,17 +52,15 @@
                         <div class="container" style="text-align: center; margin-bottom: 50px;">
                             <h1 style="margin-bottom: 20px;">ÁREAS CARENTES</h1>
                             <div class="container">
-                                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</h4>
+                                <h4 style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</h4>
                             </div>
                         </div>
                         <div id="container" style="width: 100%;height: 700px;"> 
                             
                         </div>
                     </section>    
-
-                       
                     <section id="apoiadores" style="padding-top: 75px;">
-                        <div class="container" style="background-color: #2c304d; height: 100px; border-radius: 5px;">
+                        <div class="container" style="background-color: #2c304d; height: 50px; border-radius: 5px;">
                             <div class="row" >
                                 <div class="container">
                                     <div class="col-12" style="top: -30px; padding-left: 20rem; width: 60rem;">
@@ -76,37 +73,7 @@
                                 </div> 
                             </div>
                         </div>
-
-                        <div class="container">
-                            <div class="row" >
-                                <div class="col-4" style=" top: -30px">
-                                    <div class="widget widget-23 bg-grey d-flex justify-content-center align-items-center" style="height: 60px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
-                                        <div class="widget-body text-center">
-                                            <h4>Total de apoiadores:.</h4>
-                                            <?php
-                                                echo ApoiadorController::showTotalApoiadores();
-                                            ?>
-                                        </div>
-                                    </div>
-                                </div>  
-                                <div class="col-4" style=" top: -30px">
-                                    <div class="widget widget-23 bg-grey d-flex justify-content-center align-items-center" style="height: 60px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
-                                        <div class="widget-body text-center">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4" style=" top: -30px">
-                                    <div class="widget widget-23 bg-grey d-flex justify-content-center align-items-center" style="height: 60px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
-                                        <div class="widget-body text-center">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="container">
+                        <div class="container" style="margin-top: 50px;">
                             <div class="row">
                                 <?php
                                     echo MidiaController::showApoiador();
@@ -119,7 +86,7 @@
                             <h1 class="text-center">FEEDBACKS</h1>
                             <div class="row" >
                                 <div class="col-6">
-                                    <img src="../image/comentarios.jpg" class="img-fluid" style="width: 900px; height: 900px;" alt="">
+                                    <img src="../image/comentarios.jpg" class="img-fluid" style="width: 900px; height: 900px;">
                                 </div>  
                                 <div class="col-6">
                                     <div id="carouselFeedbacks" class="carousel slide" data-ride="carousel" style="margin-top: 200px; left: -4rem;">
@@ -178,88 +145,87 @@
                                     <img src="../image/email_2.png" class="img-fluid" alt="">
                                 </div> 
                             </div>
+                            <div class="container-fluid">
+                                <a href="https://api.whatsapp.com/send?phone=5531994870472" style="float: right; margin-bottom: 30px;">
+                                    <div class="brand-image brand-big">
+                                        <img src="../image/icons/whatsap_icon.png" style="width: 70px;">
+                                        
+                                    </div>
+                                </a>
+                            </div>
                         </div>
                     </section>    
-                        
-                    
-                    <!-- End Offcanvas Sidebar -->
                 </div>
-                <!-- End Content -->
-            </div>
-            <!-- End Page Content -->
+            </div> 
         </div>
       
-        <!-- Bootstrap core JavaScript -->
+    
         <script src="../js/jquery/jquery.min.js"></script>
         <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
-
-        <!-- Plugin JavaScript -->
         <script src="../js/jquery-easing/jquery.easing.min.js"></script>
-
-        <!-- Custom JavaScript for this theme -->
         <script src="../js/scrolling/scrolling-nav.js"></script>
-    
-        <!-- End Page Snippets -->
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
-  <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
-  <script src="https://cdn.anychart.com/releases/v8/js/anychart-map.min.js"></script>
-  <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
-  <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
-  <script src="https://cdn.anychart.com/geodata/2.1.0/countries/brazil/brazil.js"></script>
-  <script type="text/javascript">anychart.onDocumentReady(function() {
-  // create map
-  var map = anychart.map();
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-map.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+        <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+        <script src="https://cdn.anychart.com/geodata/2.1.0/countries/brazil/brazil.js"></script>
+        <script type="text/javascript">anychart.onDocumentReady(function() {
+        // create map
+        var map = anychart.map();
 
-  // create data set
-  var dataSet = anychart.data.set(
-      [{"id":"BR.GO","value":0},
-			{"id":"BR.SP","value":1},
-			{"id":"BR.PE","value":2},
-			{"id":"BR.AC","value":3},
-			{"id":"BR.AM","value":4},
-			{"id":"BR.MA","value":5},
-			{"id":"BR.PA","value":6},
-			{"id":"BR.RO","value":7},
-			{"id":"BR.TO","value":8},
-			{"id":"BR.DF","value":9},
-			{"id":"BR.MS","value":10},
-			{"id":"BR.MG","value":11},
-			{"id":"BR.MT","value":12},
-			{"id":"BR.RS","value":13},
-			{"id":"BR.PR","value":14},
-			{"id":"BR.SC","value":15},
-			{"id":"BR.CE","value":16},
-			{"id":"BR.PI","value":17},
-			{"id":"BR.AL","value":18},
-			{"id":"BR.BA","value":19},
-			{"id":"BR.ES","value":20},
-			{"id":"BR.PB","value":21},
-			{"id":"BR.RJ","value":22},
-			{"id":"BR.RN","value":23},
-			{"id":"BR.SE","value":24},
-			{"id":"BR.RR","value":25},
-			{"id":"BR.AP","value":26}]
-  );
+        // create data set
+        var dataSet = anychart.data.set(
+            [{"id":"BR.GO","value":0},
+                    {"id":"BR.SP","value":1},
+                    {"id":"BR.PE","value":2},
+                    {"id":"BR.AC","value":3},
+                    {"id":"BR.AM","value":4},
+                    {"id":"BR.MA","value":5},
+                    {"id":"BR.PA","value":6},
+                    {"id":"BR.RO","value":7},
+                    {"id":"BR.TO","value":8},
+                    {"id":"BR.DF","value":9},
+                    {"id":"BR.MS","value":10},
+                    {"id":"BR.MG","value":11},
+                    {"id":"BR.MT","value":12},
+                    {"id":"BR.RS","value":13},
+                    {"id":"BR.PR","value":14},
+                    {"id":"BR.SC","value":15},
+                    {"id":"BR.CE","value":16},
+                    {"id":"BR.PI","value":17},
+                    {"id":"BR.AL","value":18},
+                    {"id":"BR.BA","value":19},
+                    {"id":"BR.ES","value":20},
+                    {"id":"BR.PB","value":21},
+                    {"id":"BR.RJ","value":22},
+                    {"id":"BR.RN","value":23},
+                    {"id":"BR.SE","value":24},
+                    {"id":"BR.RR","value":25},
+                    {"id":"BR.AP","value":26}]
+        );
 
-  // create choropleth series
-  series = map.choropleth(dataSet);
+        // create choropleth series
+        series = map.choropleth(dataSet);
 
-  // set geoIdField to 'id', this field contains in geo data meta properties
-  series.geoIdField('id');
+        // set geoIdField to 'id', this field contains in geo data meta properties
+        series.geoIdField('id');
 
-  // set map color settings
-  series.colorScale(anychart.scales.linearColor('#deebf7', '#3182bd'));
-  series.hovered().fill('#addd8e');
+        // set map color settings
+        series.colorScale(anychart.scales.linearColor('#deebf7', '#3182bd'));
+        series.hovered().fill('#addd8e');
 
-  // set geo data, you can find this map in our geo maps collection
-  // https://cdn.anychart.com/#maps-collection
-  map.geoData(anychart.maps['brazil']);
+        // set geo data, you can find this map in our geo maps collection
+        // https://cdn.anychart.com/#maps-collection
+        map.geoData(anychart.maps['brazil']);
 
-  //set map container id (div)
-  map.container('container');
+        //set map container id (div)
+        map.container('container');
 
-  //initiate map drawing
-  map.draw();
-});</script>
+        //initiate map drawing
+        map.draw();
+        });
+        </script>
     </body>
 </html>

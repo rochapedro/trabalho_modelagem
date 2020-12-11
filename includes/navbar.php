@@ -4,12 +4,13 @@
         <!-- Begin Logo -->
        
                 <div class="navbar-header">
-                    <a href="db-modern.html" class="navbar-brand">
+                    <a href="index.php" class="navbar-brand">
                         <div class="brand-image brand-big">
-                            <img src="../assets/img/logo.png" alt="logo" style="width: 70px;" class="logo-big">
+                            <!--<img src="" alt="logo" style="width: 70px;" class="logo-big">-->
+                            <span>Projeto Social</span>
                         </div>
                         <div class="brand-image brand-small">
-                            <img src="../assets/img/logo.png" alt="logo" class="logo-small">
+                            <img src="" alt="logo" class="logo-small">
                         </div>
                     </a>
                 </div>

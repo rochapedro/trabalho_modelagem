@@ -52,7 +52,7 @@ class MidiaController {
       
           $return .= '
           <h1 style="margin-bottom: 20px;">'.$row->titulo.'</h1>
-          <p>'.$row->texto.'</p>
+          <p style="text-align: justify;">'.$row->texto.'</p>
           ';
 
       }
