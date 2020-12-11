@@ -123,6 +123,33 @@ LOCK TABLES `estado` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `feedback`
+--
+
+DROP TABLE IF EXISTS `feedback`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `feedback` (
+  `id_feedback` int(11) NOT NULL AUTO_INCREMENT,
+  `id_usuario` int(11) DEFAULT NULL,
+  `feedback` varchar(500) DEFAULT NULL,
+  `ativo` int(11) DEFAULT 1,
+  `data_criado` timestamp NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id_feedback`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `feedback`
+--
+
+LOCK TABLES `feedback` WRITE;
+/*!40000 ALTER TABLE `feedback` DISABLE KEYS */;
+INSERT INTO `feedback` VALUES (1,1,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 12:51:43'),(2,2,'fsdafdsa fdsa fdsa fdsaf dsaf dsafdsa fdsa dfa safdsa dsaf ',1,'2020-12-11 14:12:38'),(3,3,' fdsa fdsa fdsafdsa fdsafdsa fdsa fdsafdsafdhsjfdhsjajklfdjsha  hjkdlsahjkl',1,'2020-12-11 14:12:38'),(4,4,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:12:38'),(5,5,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:12:38'),(6,6,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:12:38'),(7,7,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:12:38'),(8,8,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',NULL,'2020-12-11 14:12:38'),(9,9,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:28:25'),(10,10,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:28:25'),(11,11,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:28:25'),(12,12,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:28:25'),(13,13,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:28:25'),(14,14,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:28:25'),(15,15,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:28:25'),(16,16,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:28:25'),(17,17,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:28:25'),(18,18,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:28:25'),(19,19,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:28:25'),(20,20,'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled',1,'2020-12-11 14:28:25');
+/*!40000 ALTER TABLE `feedback` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `localidade`
 --
 
@@ -329,11 +356,15 @@ CREATE TABLE `usuario` (
   `nome` varchar(100) DEFAULT NULL,
   `sobrenome` varchar(100) DEFAULT NULL,
   `data_nascimento` date DEFAULT NULL,
+  `id_midia` int(11) DEFAULT NULL,
   `senha` varchar(8) NOT NULL,
   `usuario` varchar(100) DEFAULT NULL,
   `data` timestamp NULL DEFAULT current_timestamp(),
-  PRIMARY KEY (`id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `ativo` int(11) DEFAULT 1,
+  PRIMARY KEY (`id_usuario`),
+  KEY `fk_usuario_midia_idx` (`id_midia`),
+  CONSTRAINT `fk_usuario_midia` FOREIGN KEY (`id_midia`) REFERENCES `midia` (`id_midia`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -342,6 +373,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` VALUES (1,'Pedro','Rocha',NULL,4,'123456','pedro.rocha','2020-12-11 12:51:11',1),(2,'Usuario ','Segundo',NULL,4,'123456',NULL,'2020-12-11 14:09:57',1),(3,'Usuario','Terceiro',NULL,4,'123456',NULL,'2020-12-11 14:11:44',1),(4,'Usuario','Quarto',NULL,4,'',NULL,'2020-12-11 14:11:44',1),(5,'Usuario','Quinto',NULL,4,'',NULL,'2020-12-11 14:11:44',1),(6,'Usuario','Sexto',NULL,4,'',NULL,'2020-12-11 14:11:44',1),(7,'Usuario','Setimo',NULL,4,'',NULL,'2020-12-11 14:11:44',1),(15,'Usuario','Oitavo',NULL,4,'',NULL,'2020-12-11 14:27:45',1),(16,'Usuario','Nono',NULL,4,'',NULL,'2020-12-11 14:27:45',1),(17,'Usuario','Decimo',NULL,4,'',NULL,'2020-12-11 14:27:45',1),(18,'Usuario','Decimo Primeiro',NULL,4,'',NULL,'2020-12-11 14:27:45',1),(19,'Usuario','Decimo Segundo',NULL,4,'',NULL,'2020-12-11 14:27:45',1),(20,'Usuario','Decimo Terceiro',NULL,4,'',NULL,'2020-12-11 14:27:45',1);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -354,4 +386,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-11  9:11:22
+-- Dump completed on 2020-12-11 13:47:07
