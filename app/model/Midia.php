@@ -46,4 +46,15 @@ class Midia {
         }
     }
 
+    public function getApoiador(){
+        try{
+            $stmt = $this->pdo->prepare("SELECT * FROM apoiador WHERE ativo = 1;");
+            $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_CLASS);
+            return $result;
+        } catch (PDOException $exc) {
+            echo get_class($this).": {$exc->getMessage()}";
+        }
+    }
+
 }

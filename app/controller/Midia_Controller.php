@@ -59,6 +59,35 @@ class MidiaController {
       return $return;
   }
 
+  public static function showApoiador(){
+    $data = new Midia();
+    $data = $data->getApoiador();
+
+    $return = '';
+    foreach ($data as $row){
+    
+        $return .= '
+        <div class="col-6">
+          <div class="card" style="height: 150px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
+              <div class="row no-gutters">
+                  <div class="col-md-4">
+                      <img src="'.$row->foto.'" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                      <div class="card-body">
+                          <h5 class="card-title">'.$row->nome.'</h5>
+                          <p class="card-text">'.$row->comentario.'</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        ';
+
+    }
+    return $return;
+}
+
     
 
 }

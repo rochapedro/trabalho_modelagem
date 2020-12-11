@@ -104,48 +104,9 @@
 
                         <div class="container">
                             <div class="row">
-                                <div class="col-4" style="">
-                                    <div class="widget widget-23 bg-grey d-flex justify-content-center align-items-center" style="height: 300px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
-                                        <div class="widget-body text-center">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4" style="">
-                                    <div class="widget widget-23 bg-grey d-flex justify-content-center align-items-center" style="height: 300px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
-                                        <div class="widget-body text-center">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4" style="">
-                                    <div class="widget widget-23 bg-grey d-flex justify-content-center align-items-center" style="height: 300px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
-                                        <div class="widget-body text-center">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4" style="">
-                                    <div class="widget widget-23 bg-grey d-flex justify-content-center align-items-center" style="height: 300px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
-                                        <div class="widget-body text-center">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4" style="">
-                                    <div class="widget widget-23 bg-grey d-flex justify-content-center align-items-center" style="height: 300px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
-                                        <div class="widget-body text-center">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4" style="">
-                                    <div class="widget widget-23 bg-grey d-flex justify-content-center align-items-center" style="height: 300px; border-radius: 5px; box-shadow: 5px 5px 5px rgba(0,0,0,0.5);">
-                                        <div class="widget-body text-center">
-                                            
-                                        </div>
-                                    </div>
-                                </div>
+                                <?php
+                                    echo MidiaController::showApoiador();
+                                ?>
                             </div>
                         </div>
                     </section>    
